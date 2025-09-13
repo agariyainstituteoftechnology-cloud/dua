@@ -74,6 +74,7 @@ body{
 
 /* Logo */
 .logo {
+    padding: 5px;
     width: 84px;
     height: 51px;
     top: 23px;
@@ -231,5 +232,140 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+
+
+
+
+    .footer {
+      background: #fff; 
+      padding: 100px 60px 20px 60px;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Arrow Wrapper => Full width + center */
+    .footer .arrow-wrapper {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Arrow Circle */
+    .footer .up-arrow {
+      display: inline-flex;
+      background: #007bff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 26px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer-content {
+      gap: 20px;
+    }
+
+    .footer-column {
+      line-height: 1.8;
+    }
+
+    .footer-column h3 {
+        font-weight: 500;
+      margin-bottom: 15px;
+      color:#243D4C ;
+    }
+
+    .footer-column .line {
+    width: 50px;
+    height: 3px;
+    background:  #4581FB;
+    border-radius: 2px;
+}
+
+    .footer-column p {
+      font-size: 16px;
+      color: #2C3D5F;
+      margin-top: 10px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #2C3D5F;
+    }
+
+    .footer-column ul li a{
+      font-size: 14px;
+      text-decoration: none;
+      color: #243D4C;
+    }
+
+    /* Contact Column */
+    .contact-item {
+     display: flex;
+    align-items: center;
+      margin: 8px 0;
+      font-size: 14px;
+      color: #243D4C;
+    }
+
+    .contact-item span img{
+      margin-right: 10px;
+      font-size: 16px;
+      color: #007bff;
+    }
+
+    /* Social Icons */
+    .social {
+      margin-top: 15px;
+      gap: 25px;
+    }
+
+    .social span img {
+      width: 32px;
+      height: 32px;
+      
+    }
+    .footer-column .line {
+    width: 50px;
+    height: 3px;
+    background:  #4581FB;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+    /* Bottom Bar */
+    .footer-bottom {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+      padding-top: 15px;
+      margin-bottom: 20px;;
+      text-align: center;
+      font-size: 16px;
+      color: #2C3D5F;
+    }
+
+    .footer-bottom .logo {
+      gap: 10px;
+    }
+
+    .footer-bottom img {
+        width: 62px;
+      height: 40px;
+      margin-left: 10px;
+    
+    }
 
 
