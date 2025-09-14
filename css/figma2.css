@@ -65,6 +65,10 @@
 .w-90{
     width: 90%;
 }
+:root{
+  --themecolor:#4581FB;
+  --textcolor:#2C3D5F;
+}
 
 /* globle css end*/
 
@@ -94,10 +98,10 @@ body{
 }
 .main-header nav ul li a{
   text-decoration: none;
-  color: #000;
+  color: var(--textcolor);
 }
 .main-header nav ul li a.active {
-  color: #4581FB;
+  color: var(--themecolor);
 }
 
 /* Icons */
@@ -116,18 +120,19 @@ body{
 }
     /* Heading */
 .heading-area h2 {
-    font-size: 32px;
+    font-size: 50px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .heading-area h2 span {
-    color: #4581FB;
+    color: var(--themecolor);
 }
 
 .heading-area p {
-    font-size: 16px;
-    color: #555;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--textcolor);
     margin-bottom: 40px;
 }
 
@@ -147,7 +152,7 @@ body{
 .filter-bar{
     margin-bottom: 25px;
     font-size: 16px;
-    color: #2C3D5F;
+    color: var(--textcolor);
 }
 
 .filter{
@@ -183,7 +188,7 @@ body{
 
 .product p {
     font-size: 14px;
-    color: #333;
+    color: var(--textcolor);
     margin: 8px 0;
 }
 
@@ -199,7 +204,7 @@ body{
 .product h3 {
     font-size: 18px;
     font-weight: bold;
-    color: #4581FB;
+    color: var(--themecolor);
     margin-top: 5px;
 }
 /* number*/
@@ -215,12 +220,12 @@ body{
     cursor: pointer;
     width: 35px;
     height: 35px;
-    color: #34373C;
+    color: var(--textcolor);
 }
 
 .page-active{
 
-    background-color: #4581FB;
+    background-color: var(--themecolor);
     color: white;
     width: 34px;
     height: 34px;
@@ -232,10 +237,6 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
-
-
-
-
 
 
     .footer {
@@ -257,7 +258,7 @@ body{
     /* Arrow Circle */
     .footer .up-arrow {
       display: inline-flex;
-      background: #007bff;
+      background: var(--themecolor);
       width: 60px;
       height: 60px;
       border-radius: 50%;
@@ -278,19 +279,19 @@ body{
     .footer-column h3 {
         font-weight: 500;
       margin-bottom: 15px;
-      color:#243D4C ;
+      color: var(--textcolor) ;
     }
 
     .footer-column .line {
     width: 50px;
     height: 3px;
-    background:  #4581FB;
+    background:  var(--themecolor);
     border-radius: 2px;
 }
 
     .footer-column p {
       font-size: 16px;
-      color: #2C3D5F;
+      color: var(--textcolor);
       margin-top: 10px;
     }
 
@@ -303,13 +304,13 @@ body{
     .footer-column ul li {
       margin-bottom: 8px;
       font-size: 14px;
-      color: #2C3D5F;
+      color: var(--textcolor);
     }
 
     .footer-column ul li a{
       font-size: 14px;
       text-decoration: none;
-      color: #243D4C;
+      color: var(--textcolor);
     }
 
     /* Contact Column */
@@ -318,13 +319,13 @@ body{
     align-items: center;
       margin: 8px 0;
       font-size: 14px;
-      color: #243D4C;
+      color: var(--textcolor);
     }
 
     .contact-item span img{
       margin-right: 10px;
       font-size: 16px;
-      color: #007bff;
+      color: var(--themecolor);
     }
 
     /* Social Icons */
@@ -341,7 +342,7 @@ body{
     .footer-column .line {
     width: 50px;
     height: 3px;
-    background:  #4581FB;
+    background:  var(--themecolor);
     border-radius: 2px;
     margin-bottom: 10px;
 }
@@ -354,7 +355,7 @@ body{
       margin-bottom: 20px;;
       text-align: center;
       font-size: 16px;
-      color: #2C3D5F;
+      color: var(--textcolor);
     }
 
     .footer-bottom .logo {
