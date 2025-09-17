@@ -33,6 +33,9 @@
 .w-full{
     width: 100%;
 }
+.w-10{
+  width: 10%;
+}
 
 .w-20{
     width: 20%;
@@ -85,7 +88,7 @@ header .logo {
     left: 80px;
 }
 
-.header > .wrappar{
+.header > .wrapper{
     padding: 20px;
 }
 
@@ -107,21 +110,22 @@ header .logo {
   cursor: pointer;
 }
 
-
 /* Product Section */
 
 .page-bg {
-  background: #fff;
-  padding: 20px;
-  margin: 40px;
-  gap: 20px;
+
+    background: #fff;
+    padding: 100px 60px 20px 60px;
+    position: relative;
+    overflow: visible;
+    margin-top: 40px;
 }
 
 .product-thumbs img {
   width:118px; 
   height:138px;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
  
 }
 
@@ -136,25 +140,48 @@ header .logo {
   margin: auto;
   
 }
+.product-image {
+  position: relative;
+  width: 100%;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: none;
-  background: var(--themecolor);
-  color: #fff;
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0;
 }
-.arrow.left { 
-  left: 10px; 
-  background:#FAFCFC; 
-  border-radius: 50%;
+
+/* Left arrow button */
+.arrow.left {
+  left: 10px;
+  background: #fff;  /* white background */
 }
-.arrow.right { 
-  right: 10px; 
+
+/* Right arrow button */
+.arrow.right {
+  right: 10px;
+  background: var(--themecolor);  /* blue background */
+}
+
+.arrow img {
+  width: 18px;  
+  height: auto;
 }
 
 /* Product Info */
@@ -229,13 +256,16 @@ header .logo {
   gap: 20px;
 }
 .quantity {
-  width: 160px;
-  padding: 15px;
-  border-radius: 12px;
-  background: #ECF0F3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 160px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ECF0F3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+
 }
 .btn {
   height: 52px;
@@ -262,76 +292,87 @@ header .logo {
   gap: 10px;
   color: var(--textcolor);
 }
-.divider {
-  border: none;
-  height: 1px;
-  background: rgba(0,0,0,0.2);
-  margin: 30px 0;
-}
-
-/* Description & Reviews */
+/* ==== Shared Wrapper for Description + Reviews ==== */
 .desc-reviews {
-  gap: 40px;
-  margin-bottom: 40px;
-}
-.description {
-  line-height: 1.8;
-}
-
-.section-line {
-  width: 1280px;
-  max-width: 100%;
-  height: 1px;
-  background: black;
-  opacity: 0.2;
-  margin: 30px auto 0; /* center and spacing */
-}
-.description p {
-  margin-bottom: 20px;
-  color: var(--textcolor);
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 20px;
+  border-top: 1px solid #ddd;    /* upar wali line */
+  border-bottom: 1px solid #ddd; /* neeche wali line */
+  gap: 40px; /* description aur reviews ke beech thoda gap */
 }
 
-.description h2,
-.reviews h2 {
+/* ==== Description ==== */
+.description h2 {
   font-weight: 600;
   margin-bottom: 15px;
+  color: var(--textcolor);
 }
-/* Reviews styling */
-.reviews h2{
-  font-size: 22px;
+
+.description p {
+  line-height: 1.6;
+  font-size: 14px;
   margin-bottom: 20px;
   color: var(--textcolor);
 }
- a.write-review{
-  text-decoration: none;
-  color: var(--themecolor);
+
+/* ==== Reviews ==== */
+.reviews .flex {
+  margin-bottom: 20px;
 }
-h4{
+
+.reviews h2 {
+  font-weight: 600;
+  color: var(--textcolor);
+}
+
+.write-review {
+  font-size: 14px;
+  color: var(--themecolor);
+  text-decoration: none;
+}
+
+.review-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.review-item h4 {
   font-weight: 500;
   color: var(--textcolor);
+  margin-bottom: 5px;
   margin-left: 10px;
-}
-.review-item p{
-  color: var(--textcolor);
-  margin-top: 15px;
-  margin-bottom: 25px;
-
-}
-.review-item .line {
-  width: 100%;
-  height: 1px;
-  background-color: black;  /* black line */
-  opacity: 0.2;       
-  margin-bottom: 25px;      /* thoda light black */
 }
 
 .review-item img.color {
-  width: 107px;
-  height: 19px;
+  width: 100px; 
+  display: block;
   margin-left: 10px;
 }
 
+.review-item p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--textcolor);
+}
+.review-item:last-child {
+  border-bottom: none;
+}
+
+
+
+.review-time {
+  font-size: 13px;
+  color: var(--textcolor);
+  margin-left: auto; 
+}
+
 /* Related */
+
+
 .related h2 {
   font-weight: 600;
   font-size: 24px;
@@ -355,6 +396,35 @@ h4{
     color: var(--themecolor);
     margin-top: 5px;
 }
+    /* Products flexbox */
+.products {
+    flex-wrap: wrap; 
+}
+
+.product {
+    width: 23%; 
+    margin-bottom: 40px;
+    text-align: center;
+}
+.product img.stars {
+    width: 107px;
+    margin: 10px auto;
+    display: block;
+}
+
+.product p {
+    font-size: 14px;
+    color: var(--textcolor);
+    margin: 8px 0;
+}
+
+.product img.main-img{
+    width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 4px;
+}
+
 
 /*footer*/
 
