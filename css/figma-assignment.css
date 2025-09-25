@@ -1,9 +1,9 @@
 /* -------- Global CSS Start -------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -32,6 +32,9 @@
 
 .w-full{
     width: 100%;
+}
+.w-10{
+  width: 10%;
 }
 
 .w-20{
@@ -65,10 +68,10 @@
 .w-90{
     width: 90%;
 }
-
 :root{
     --themecolor:#4581FB;
     --textcolor:#2C3D5F;
+    --lightgraycolor: rgb(44 61 95 / 50%);
 }
 
 /* globle css end*/
@@ -76,7 +79,6 @@
 body{
     background:#F4F8F9;
 }
-
 /* Logo */
 header .logo {
     padding: 10px;
@@ -99,11 +101,11 @@ header .logo {
   text-decoration: none;
   color: var(--textcolor);
 }
-.main-header nav ul li a.active {
+.main-header nav ul li a.active{
   color:var(--themecolor);
   position: relative;
 }
-.main-header nav ul li a.active::after {
+.main-header nav ul li a.active::after{
   content: "";
   position: absolute;
   left: -8px;
@@ -118,8 +120,7 @@ header .icons {
   gap: 15px;
   cursor: pointer;
 }
-
-   /*section*/
+ /*section*/
 .banner .hero {
     padding: 50px 10px;
     min-height: 100vh;
@@ -149,7 +150,7 @@ header .icons {
     margin-bottom: 30px;
 }
 
-.btn {
+.btn-now{
     display: inline-block;
     background:var(--themecolor);
     color: #fff;
@@ -272,7 +273,6 @@ header .icons {
     grid-area: shoes; 
     width: 630px; 
 }
-
 /*best seller*/
 .best-seller{
     background-color: #fff;
@@ -302,9 +302,16 @@ header .icons {
     margin-bottom: 40px;
 }
 
-    /* Products flexbox */
+  /* Products flexbox */
 .products {
     flex-wrap: wrap; 
+    gap: 20px;
+}
+.best-products{
+  background-color: #fff;
+  box-shadow: 0 0 1.5px rgba(0,0,0,0.05); 
+  margin-top: 20px;
+  padding: 50px 0;
 }
 
 .product {
@@ -312,7 +319,6 @@ header .icons {
     margin-bottom: 40px;
     text-align: center;
 }
-
 .product img.main-img {
     width: 100%;
     object-fit: cover;
@@ -326,8 +332,8 @@ header .icons {
     overflow: hidden;
 }
 .prd-img-wrap:hover .options{
-    opacity: 1;
-    right: 0;
+  opacity: 1;
+  width: 100%;
 }
 
 .options{
@@ -342,12 +348,18 @@ header .icons {
     opacity: 0;
     transition: 0.3s ease all;
 }
-.options .search{
+.options .searchs{
     background: transparent;
     border: none;
     margin-right: 9px;
 }
-
+.options .search{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: var(--themecolor);
+    border: 2px solid #fff;
+}
 .options .cart{
     height: 30px;
     width: 30px;
@@ -359,8 +371,6 @@ header .icons {
 .prd-img{
     width: 100%;
 }
-
-
 .product img.stars {
     width: 107px;
     margin: 10px auto;
@@ -385,7 +395,22 @@ header .icons {
     color: var(--themecolor);
     margin-top: 5px;
 }
-    /* ---------- First Section (3 Images Row) ---------- */
+.filter-bar{
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--textcolor);
+  outline: none;
+}
+/* select box design */
+.filter-left select {
+  padding: 6px 12px;
+  border: none;        
+  outline: none;        
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ /* ---------- First Section (3 Images Row) ---------- */
 .image-row {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -411,7 +436,6 @@ header .icons {
     font-weight: 500;
     opacity: 90%;
 }
-
 /* Blog Section */
 .blog-header {
     margin-bottom: 40px;
@@ -474,6 +498,11 @@ header .icons {
     line-height: 1.5;
     margin-bottom:16px;
 }
+.icon img{
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+}
 
 .read-btn {
     background: var(--themecolor);
@@ -486,21 +515,370 @@ header .icons {
     font-size: 14px;
     margin-top: 10px;
 }
- /*footer*/
+/* number*/
+.numbers{
+  gap: 20px;
+  padding: 30px 0;
+}
 
-.arrow{
+.page{
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 35px;
+  color: var(--textcolor);
+}
+
+.page-active{
+  background-color: var(--themecolor);
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+}
+.arrows{
     padding: 8px 14px;
     border-radius: 50%;
     cursor: pointer;
 }
 
+/* Product Section */
 
-   .footer {
-      background: #fff; 
-      padding: 100px 60px 20px 60px;
-      position: relative;
-      overflow: visible;
-    }
+.page-bg {
+
+    background: #fff;
+    padding: 60px 20px 60px 20px;
+    position: relative;
+    overflow: visible;
+    margin-top: 40px;
+}
+.product-section{
+  display: flex;
+  gap: 20px;
+}
+
+.product-thumbs img {
+  width:118px; 
+  height:138px;
+  display: block;
+  margin-bottom: 17.5px;
+ 
+}
+.product-image {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.product-icons{
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.product-icons .search{
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+}
+.product-icons .search img{
+  width: 18px;
+  height: 18px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 0;
+}
+
+/* ===== Left arrow button ===== */
+.arrow.left {
+  left: 10px;
+  background: #fff;  
+}
+.arrow.right {
+  right: 10px;
+  background: var(--themecolor);  
+}
+
+.arrow img {
+  width: 18px;  
+  height: auto;
+}
+/* Product Info */
+.product-info {
+  padding: 5px 20px;
+  margin-left: 10px;
+}
+.info-line{
+  font-size: 16px;
+  color: var(--textcolor);
+  margin: 6px 0;
+  padding-bottom: 5px;
+}
+.info-line .gray{
+    color: var(--lightgraycolor);
+    padding-bottom: 10px;
+    margin-left: 60px;
+    padding-bottom: 5px;
+
+}
+.info-line .gray2{
+    margin-left: 8px;
+    color: var(--lightgraycolor);
+    padding-bottom: 10px;
+    padding-bottom: 5px;
+
+}
+.info-line .gray3{
+    margin-left: 39px;
+    color: var(--lightgraycolor);
+    padding-bottom: 10px;
+    padding-bottom: 5px;
+}
+.product-info h1{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--textcolor);
+  padding-bottom: 8px;
+}
+.product-info .price{
+  font-size: 30px;
+  color: var(--themecolor);
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+.product-info .tax{
+  font-weight: 400;
+  color: var(--lightgraycolor);
+  padding-bottom: 17px;
+}
+.rating img{
+  margin-right: 10px;
+  padding-bottom: 15px;
+}
+.reviews{
+  color: var(--themecolor);
+  margin-left: 10px;
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+.colors{
+    margin-bottom: 14px;
+}
+.colors .info-line{
+    margin-right: 50px;
+}
+.color-options {
+  display: flex;       
+  gap: 10px;
+  align-items: center;
+  overflow: visible;   
+}
+.color-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative; 
+  box-sizing: border-box;
+}
+.color-box.selected::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(24px + 8px);  
+  height: calc(24px + 8px);
+  border-radius: 50%;
+  border: 2px solid var(--themecolor); 
+  pointer-events: none;
+  box-sizing: border-box;
+}  
+/* ===== color ===== */
+.circle1{
+    background: linear-gradient(#1F1D22 ,#4C4B4E);
+}
+.circle2{
+    background: linear-gradient(#5287A1, #2A6481);
+}
+.circle3{
+
+    background: linear-gradient(#3C3F5B, #434878);
+}
+.circle4{
+    background: linear-gradient(#F64C4B,#D42C2B );
+}
+
+.cart-actions{
+  margin: 20px 0;
+  gap: 20px;
+}
+.quantity{
+  width: 160px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #ECF0F3;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+.btn {
+  height: 52px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.btn.add {
+  background: #164AB4;
+  border-radius: 10px;
+  color: #fff;
+  width: 376px;
+}
+.btn.buy {
+  width: 557px;
+  background: var(--themecolor);
+  color: #fff;
+  margin-top: 15px;
+}
+.agree {
+  margin: 15px 0;
+  gap: 10px;
+  color: var(--textcolor);
+}
+/* ==== Description ==== */
+.description h2 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--textcolor);
+}
+
+.description p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: gray;
+}
+.description p.margin{
+  margin-bottom: 0;
+}
+
+/* ==== Reviews ==== */
+.reviews .flex {
+  margin-bottom: 20px;
+}
+
+.reviews h2 {
+  font-weight: 600;
+  color: var(--textcolor);
+}
+
+.write-review {
+  font-size: 14px;
+  color: var(--themecolor);
+  text-decoration: none;
+}
+.review-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.review-item h4 {
+  font-weight: 500;
+  color: var(--textcolor);
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.review-item img.color {
+  width: 100px; 
+  display: block;
+  margin-left: 10px;
+}
+.review-item p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-top: 10px;
+  color: gray;
+}
+.review-item:last-child {
+  border-bottom: none;
+}
+.review-time {
+  font-size: 13px;
+  color: var(--lightgraycolor);
+  margin-left: auto; 
+}
+.desc-reviews {
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 20px;
+  border-top: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd;
+  gap: 40px; 
+}
+/* Related */
+.related .arrows {
+  gap: 20px;   /* ab dono arrows ke beech gap aayega */
+}
+.related .arrows img {
+  cursor: pointer;
+}
+.related h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--textcolor);
+  margin-bottom: 20px;
+}
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--themecolor);
+    margin-top: 5px;
+}
+
+
+
+
+
+/*footer*/
+
+.arrow{
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+.footer {
+    background: #fff;
+    padding: 100px 60px 20px 60px;
+    position: relative;
+    overflow: visible;
+    margin-top: 40px;
+}
 
 .footer .arrow-wrapper {
     position: absolute;
@@ -617,406 +995,3 @@ header .icons {
     height: 25px;
     margin-left: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  Responsive Design  */
-/* ====== Large Tablets / Small Laptops (max-width: 1024px) ====== */
-@media (max-width: 1024px) {
-  /* ===== Header ===== */
-  .main-header nav ul {
-    gap: 15px;
-  }
-  .main-header nav li {
-    font-size: 16px;
-  }
-
-  /* ===== Banner / Hero ===== */
-  .banner .hero {
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-  .banner .hero-content {
-    max-width: 60%;
-  }
-  .banner .hero .hero-content .heading {
-    font-size: 36px;   /* pehle bahut bada tha */
-    line-height: 1.3;
-  }
-  .banner .hero .hero-content .para {
-    font-size: 15px;
-  }
-  .btn {
-    padding: 12px 24px;
-    font-size: 15px;
-  }
-  .hero-image {
-    max-width: 40%;
-  }
-
-  /* ===== Categories Grid ===== */
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "sale women men"
-      "new accessories shoes";
-    gap: 20px;
-  }
-  .grid .card figcaption {
-    font-size: 15px;
-    padding: 8px 12px;
-  }
-
-  /* ===== Products / Bestseller ===== */
-  .products {
-    justify-content: space-between;
-  }
-  .product {
-    width: 30%; /* 3 per row */
-    margin-bottom: 20px;
-  }
-  .product h3 {
-    font-size: 17px;
-  }
-  .product .price {
-    font-size: 15px;
-  }
-
-  /* ===== Blog ===== */
-  .blog-row {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .blog-cards {
-    width: 45%;
-  }
-  .blog-cards .blog-content h3 {
-    font-size: 18px;
-  }
-  .blog-cards .blog-content p {
-    font-size: 14px;
-  }
-
-  /* ===== Footer ===== */
-  .footer-content {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .footer-column {
-    width: 45%;
-  }
-  .footer-column h3 {
-    font-size: 18px;
-  }
-  .footer-column p {
-    font-size: 14px;
-  }
-}
-
-/* ====== Tablets (max-width: 767px) ====== */
-@media (max-width: 767px) {
-  /* ===== Header ===== */
-  .main-header nav ul {
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .main-header nav li {
-    font-size: 15px;
-  }
-
-  /* ===== Banner / Hero ===== */
-  .banner .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .banner .hero-content {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-  .banner .hero .hero-content .heading {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-  .banner .hero .hero-content .para {
-    font-size: 14px;
-  }
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .hero-image {
-    position: relative;
-    max-width: 90%;
-    margin: auto;
-  }
-
-  /* ===== Categories Grid ===== */
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "sale new"
-      "women men"
-      "accessories shoes";
-    gap: 20px;
-  }
-  .grid .card figcaption {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  /* ===== Products / Bestseller ===== */
-  .product {
-    width: 45%;
-    margin-bottom: 20px;
-  }
-  .product h3 {
-    font-size: 16px;
-  }
-  .product .price {
-    font-size: 15px;
-  }
-
-  /* ===== Blog ===== */
-  .blog-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .blog-cards {
-    width: 100%;
-  }
-  .blog-cards .blog-content h3 {
-    font-size: 18px;
-  }
-  .blog-cards .blog-content p {
-    font-size: 14px;
-  }
-
-  /* ===== Footer ===== */
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-column {
-    width: 100%;
-  }
-  .footer-column h3 {
-    font-size: 17px;
-  }
-  .footer-column p {
-    font-size: 14px;
-  }
-}
-
-/* ====== Mobiles (max-width: 620px) ====== */
-@media (max-width: 620px) {
-  /* ===== Header ===== */
-  .main-header nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .main-header nav li {
-    font-size: 14px;
-  }
-
-  /* ===== Banner / Hero ===== */
-  .banner .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  .banner .hero-content {
-    max-width: 100%;
-    margin-bottom: 15px;
-  }
-  .banner .hero .hero-content .heading {
-    font-size: 26px;
-    line-height: 1.2;
-  }
-  .banner .hero .hero-content .para {
-    font-size: 14px;
-  }
-  .btn {
-    padding: 9px 18px;
-    font-size: 13px;
-  }
-  .hero-image {
-    max-width: 95%;
-    margin: auto;
-  }
-
-  /* ===== Categories Grid ===== */
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "sale"
-      "new"
-      "women"
-      "men"
-      "accessories"
-      "shoes";
-    gap: 15px;
-  }
-  .grid .card figcaption {
-    font-size: 13px;
-    padding: 6px 10px;
-  }
-
-  /* ===== Products / Bestseller ===== */
-  .product {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .product h3 {
-    font-size: 15px;
-  }
-  .product .price {
-    font-size: 14px;
-  }
-
-  /* ===== Blog ===== */
-  .blog-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .blog-cards {
-    width: 100%;
-  }
-  .blog-cards .blog-content h3 {
-    font-size: 16px;
-  }
-  .blog-cards .blog-content p {
-    font-size: 13px;
-  }
-
-  /* ===== Footer ===== */
-  .footer-content {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .footer-column {
-    width: 100%;
-  }
-  .footer-column h3 {
-    font-size: 16px;
-  }
-  .footer-column p {
-    font-size: 13px;
-  }
-}
-
-/* ====== Small Mobiles (max-width: 480px) ====== */
-@media (max-width: 480px) {
-  /* Header */
-  .main-header nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-  .main-header nav li {
-    font-size: 14px;
-  }
-
-  /* Banner */
-  .banner .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  .banner .hero .hero-content {
-    max-width: 100%;
-    margin-bottom: 15px;
-  }
-  .banner .hero .hero-content .heading {
-    font-size: 22px;
-    line-height: 1.2;
-  }
-  .banner .hero .hero-content .para {
-    font-size: 13px;
-  }
-  .btn {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-  .hero-image {
-    max-width: 100%;
-    margin: auto;
-  }
-
-  /* Categories Grid */
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "sale"
-      "new"
-      "women"
-      "men"
-      "accessories"
-      "shoes";
-    gap: 15px;
-  }
-  .grid .card figcaption {
-    font-size: 13px;
-    padding: 6px 10px;
-  }
-
-  /* Products / Bestseller */
-  .product {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .product h3 {
-    font-size: 15px;
-  }
-  .product .price {
-    font-size: 14px;
-  }
-
-  /* Blog */
-  .blog-cards {
-    width: 100%;
-  }
-  .blog-cards .blog-content h3 {
-    font-size: 16px;
-  }
-  .blog-cards .blog-content p {
-    font-size: 13px;
-  }
-
-  /* Footer */
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-column {
-    width: 100%;
-  }
-  .footer-column h3 {
-    font-size: 16px;
-  }
-  .footer-column p {
-    font-size: 13px;
-  }
-}
-
-
-
-
-

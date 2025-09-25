@@ -153,7 +153,7 @@ header .logo {
 
 .best-products{
   background-color: #fff;
-  box-shadow: 0 0 1.5px rgba(0,0,0,0.05); /* ✅ corrected */
+  box-shadow: 0 0 1.5px rgba(0,0,0,0.05); 
   margin-top: 20px;
   padding: 50px 0;
 }
@@ -206,7 +206,6 @@ header .logo {
     right: 0;
 }
 
-
 .options{
     position: absolute;
     inset: 0;
@@ -238,8 +237,6 @@ header .logo {
 .prd-img{
     width: 100%;
 }
-
-
 
 .product h3 {
   font-size: 16px;
@@ -304,7 +301,7 @@ header .logo {
     margin-top: 40px;
 }
 
-.footer .arrow-wrapper {
+.footer .arrow-wrapper{
     position: absolute;
     top: 10px;
     left: 0;
@@ -313,7 +310,7 @@ header .logo {
 }
 
  /* Arrow Circle */
-.footer .up-arrow {
+.footer .up-arrow{
     display: inline-flex;
     background: var(--themecolor);
     width: 60px;
@@ -325,40 +322,40 @@ header .logo {
     cursor: pointer;
 }
 
-.footer-content {
+.footer-content{
     gap: 20px;
 }
 
-.footer-column {
+.footer-column{
     line-height: 1.8;
 }
 
-.footer-column h3 {
+.footer-column h3{
     font-weight: 500;
     margin-bottom: 15px;
     color: var(--textcolor) ;
 }
 
-.footer-column .line {
+.footer-column .line{
     width: 50px;
     height: 3px;
     background:  var(--themecolor);
     border-radius: 2px;
 }
 
-.footer-column p {
+.footer-column p{
     font-size: 16px;
     color: var(--textcolor);
     margin-top: 10px;
 }
 
-.footer-column ul {
+.footer-column ul{
     list-style: none;
     margin-top: 10px;
     padding: 0;
 }
 
-.footer-column ul li {
+.footer-column ul li{
     margin-bottom: 8px;
     font-size: 14px;
     color: var(--textcolor);
@@ -371,7 +368,7 @@ header .logo {
 }
 
  /* Contact Column */
-.contact-item {
+.contact-item{
     margin: 8px 0;
     font-size: 14px;
     color: var(--textcolor);
@@ -384,15 +381,15 @@ header .logo {
 }
 
     /* Social Icons */
-.social {
+.social{
     margin-top: 15px;
     gap: 25px;
 }
 
-.social span img {
+.social span img{
     width: 32px;
 }
-.footer-column .line {
+.footer-column .line{
     width: 50px;
     height: 3px;
     background:  var(--themecolor);
@@ -402,7 +399,7 @@ header .logo {
 
     
     /* Bottom Bar */
-.footer-bottom {
+.footer-bottom{
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 30px;
     padding-top: 15px;
@@ -411,11 +408,11 @@ header .logo {
     color: var(--textcolor);
 }
 
-.footer-bottom .logo {
+.footer-bottom .logo{
     gap: 10px;
 }
 
-.footer-bottom img {
+.footer-bottom img{
     height: 25px;
     margin-left: 10px;
 }

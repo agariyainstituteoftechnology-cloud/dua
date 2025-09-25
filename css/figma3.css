@@ -71,6 +71,7 @@
 :root{
     --themecolor:#4581FB;
     --textcolor:#2C3D5F;
+    --lightgraycolor: rgb(44 61 95 / 50%);
 }
 
 /* globle css end*/
@@ -154,11 +155,11 @@ header .logo {
 
 .product-icons .search{
   overflow: hidden;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background: #fff;
-    border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
 }
 .product-icons .search img{
   width: 18px;
@@ -201,6 +202,7 @@ header .logo {
 /* Product Info */
 .product-info {
   padding: 5px 20px;
+  margin-left: 10px;
 }
 .product-info p {
   margin: 15px;
@@ -214,36 +216,37 @@ header .logo {
 .availability .label{
   margin-right: 7px;
 }
-.product-info h1 {
+.product-info h1{
   font-size: 18px;
   font-weight: 500;
   color: var(--textcolor);
 }
-.product-info .price {
+.product-info .price{
   font-size: 30px;
   color: var(--themecolor);
   font-weight: 600;
 }
 .product-info .tax{
   font-weight: 400;
-  color: var(--textcolor);
+  color: var(--lightgraycolor);
 }
-.rating img {
+.rating img{
   margin-right: 10px;
 }
-.reviews {
+.reviews{
   color: var(--themecolor);
   margin-left: 10px;
   text-decoration: none;
 }
- .colors {
-  display: flex;           /* text aur circles ek line me aa jayenge */
-  align-items: center;     /* vertically align */
-  gap: 10px;               /* text aur first circle ke beech gap */
+ .colors{
+  gap: 10px;               
   margin: 10px 0;
 }
+.colors .black-color{
+  margin-right: 40px;
+}
 
-.color-box {
+.color-box{
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -252,29 +255,31 @@ header .logo {
   box-sizing: border-box;
 }
 
-.color-box.l { background: linear-gradient(#1F1D22,#4C4B4E); }
-.color-box.i { background: linear-gradient(#5287A1 ,#2A6481); }
-.color-box.n { background: linear-gradient(#3C3F5B ,#434878); }
-.color-box.e { background: linear-gradient(#F64C4B ,#D42C2B); }
+.color-box.l{ background: linear-gradient(#1F1D22,#4C4B4E); }
+.color-box.i{ background: linear-gradient(#5287A1 ,#2A6481); }
+.color-box.n{ background: linear-gradient(#3C3F5B ,#434878); }
+.color-box.e{ background: linear-gradient(#F64C4B ,#D42C2B); }
 
-.color-box.active {
+.color-box.active{
   border: 2px solid var(--themecolor);
 }
-
-.cart-actions {
+.size .label{
+  margin-right: 70px;
+}
+.material .label{
+  margin-right: 35px;
+}
+.cart-actions{
   margin: 20px 0;
   gap: 20px;
 }
-.quantity {
-    width: 160px;
-    padding: 15px;
-    border-radius: 12px;
-    background: #ECF0F3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 500;
+.quantity{
+  width: 160px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #ECF0F3;
+  font-size: 16px;
+  font-weight: 500;
 
 }
 .btn {
@@ -302,14 +307,13 @@ header .logo {
   gap: 10px;
   color: var(--textcolor);
 }
-/* ==== Shared Wrapper for Description + Reviews ==== */
 .desc-reviews {
   max-width: 1280px;
   margin: 40px auto;
   padding: 20px;
-  border-top: 1px solid #ddd;    /* upar wali line */
-  border-bottom: 1px solid #ddd; /* neeche wali line */
-  gap: 40px; /* description aur reviews ke beech thoda gap */
+  border-top: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd;
+  gap: 40px; 
 }
 
 /* ==== Description ==== */
@@ -372,11 +376,9 @@ header .logo {
   border-bottom: none;
 }
 
-
-
 .review-time {
   font-size: 13px;
-  color: var(--textcolor);
+  color: var(--lightgraycolor);
   margin-left: auto; 
 }
 

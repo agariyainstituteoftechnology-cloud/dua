@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Assignment</title>
+</head>
+<body>
+  <h2>JavaScript Assignment</h2>
+
+  <script>
+    // Step 1: User se 2 numbers lena
+    var num1 = parseFloat(prompt("Enter first number:"));
+    var num2 = parseFloat(prompt("Enter second number:"));
+
+    // Step 2: Addition karna
+    var sum = num1 + num2;
+
+    // Step 3: Subtraction karna
+    var difference = num1 - num2;
+
+    // Step 4: Multiplication karna
+    var product = num1 * num2;
+
+    // Step 5: Division karna (sirf agar num2 0 na ho)
+    var division;
+    if (num2 !== 0) {
+      division = num1 / num2;
+    } else {
+      division = "Not possible (divide by 0)";
+    }
+
+    // Step 6: Results show karna
+    alert("Addition: " + sum +
+          "\nSubtraction: " + difference +
+          "\nMultiplication: " + product +
+          "\nDivision: " + division);
+  </script>
+
+</body>
+</html>
