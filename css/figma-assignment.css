@@ -325,49 +325,71 @@ header .icons {
     border: 2px solid #ddd;
     border-radius: 4px;
 }
-
-.prd-img-wrap{
-    position: relative;
-    border-radius: 7px;
-    overflow: hidden;
+.prd-img-wrap {
+  position: relative;
+  display: inline-block; /* wrapper sirf image jitna hi hoga */
+  overflow: hidden;
+  border-radius: 7px;
 }
-.prd-img-wrap:hover .options{
-  opacity: 1;
+
+.prd-img-wrap img {
+  display: block;
   width: 100%;
+  height: auto;
 }
 
-.options{
-    position: absolute;
-    inset: 0;
-    right: -900px;
-    background: rgba(0, 0, 0, 0.6);
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    padding: 20px;
-    opacity: 0;
-    transition: 0.3s ease all;
-}
-.options .searchs{
-    background: transparent;
-    border: none;
-    margin-right: 9px;
-}
-.options .search{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: var(--themecolor);
-    border: 2px solid #fff;
-}
-.options .cart{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: var(--themecolor);
-    border: 2px solid #fff;
+/* Overlay */
+.options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* image jitna */
+  height: 100%;  /* image jitna */
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  display: flex;
+  flex-direction: column;   /* column me arrange */
+  align-items: flex-end;    /* right side */
+  justify-content: flex-start; /* upar se start */
+  padding: 10px;
+  gap: 8px; /* icons ke beech gap */
+  box-sizing: border-box;
 }
 
+.prd-img-wrap:hover .options {
+  opacity: 1;
+}
+
+/* Common icon style */
+.options .searchs,
+.options .cart {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Cart icon (theme background) */
+.options .cart {
+  background: var(--themecolor);
+  border: 2px solid #fff;
+}
+
+/* Search icon (no background) */
+.options .searchs {
+  background: none;
+  border: none;
+}
+.options .searchs img,
+.options .cart img {
+  width: 14px;
+  height: 14px;
+}
 .prd-img{
     width: 100%;
 }
