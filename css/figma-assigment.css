@@ -232,57 +232,57 @@ header .icons {
 }
 /* Exact sizes */
 .sale { 
-    grid-area: sale; 
-    width: 305px; 
+  grid-area: sale; 
+  width: 305px; 
 }
 .new { 
-    grid-area: new; 
-    width: 305px; 
+  grid-area: new; 
+  width: 305px; 
 }
 .women { 
-    grid-area: women; 
-    width: 305px; 
+  grid-area: women; 
+  width: 305px; 
 }
 .men { 
-    grid-area: men; 
-    width: 305px; 
+  grid-area: men; 
+  width: 305px; 
 }
 .accessories { 
-    grid-area: accessories; 
-    width: 305px; 
+  grid-area: accessories; 
+  width: 305px; 
 }
 .shoes { 
-    grid-area: shoes; 
-    width: 630px; 
+  grid-area: shoes; 
+  width: 630px; 
 }
 
-/*best seller*/
+/*=============best seller==============*/
 .best-seller{
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-    padding: 100px 60px 20px 60px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  margin-top: 40px;
+  padding: 100px 60px 20px 60px;
 }
 
 .heading-area{
     text-align: center;
     margin-bottom: 40px;
 }
-    /* Heading */
+  /*============ Heading ===============*/
 .heading-area h2 {
-    font-weight: 600;
-    font-size: 50px;
-    margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
 .heading-area h2 span {
-    color: var(--themecolor);
+  color: var(--themecolor);
 }
 
 .heading-area p {
-    font-size: 24px;
-    color: var(--textcolor);
-    margin-bottom: 40px;
+  font-size: 24px;
+  color: var(--textcolor);
+  margin-bottom: 40px;
 }
 
   /* Products flexbox */
@@ -302,24 +302,16 @@ header .icons {
     margin-bottom: 40px;
     text-align: center;
 }
-.product img.main-img {
-    width: 100%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-}
 .prd-img-wrap {
   position: relative;
   display: inline-block; /* wrapper sirf image jitna hi hoga */
   overflow: hidden;
   border-radius: 7px;
 }
-
 .prd-img-wrap img {
   display: block;
   width: 100%;
 }
-
 /* Overlay */
 .options {
   position: absolute;
@@ -380,8 +372,8 @@ header .icons {
 .product img.main-img{
     width: 100%;
     object-fit: cover;
-    border: none;
-    border-radius: 4px;
+  border: none;
+  border-radius: 4px;
 }
 .product h3 {
     font-size: 18px;
@@ -606,19 +598,19 @@ header .icons {
   padding-bottom: 5px;
 }
 .info-line .gray{
-    color: var(--lightgraycolor);
-    padding-bottom: 10px;
-    margin-left: 60px;
+  color: var(--lightgraycolor);
+  padding-bottom: 10px;
+  margin-left: 60px;
 }
 .info-line .gray2{
-    margin-left: 8px;
-    color: var(--lightgraycolor);
-    padding-bottom: 10px;
+  margin-left: 8px;
+  color: var(--lightgraycolor);
+  padding-bottom: 10px;
 }
 .info-line .gray3{
-    margin-left: 39px;
-    color: var(--lightgraycolor);
-    padding-bottom: 10px;
+  margin-left: 39px;
+  color: var(--lightgraycolor);
+  padding-bottom: 10px;
 }
 .product-info h1{
   font-size: 30px;
@@ -675,7 +667,6 @@ header .icons {
   height: calc(24px + 8px);
   border-radius: 50%;
   border: 2px solid var(--themecolor); 
-  pointer-events: none;
   box-sizing: border-box;
 }  
 /* ===== color ===== */
@@ -797,7 +788,7 @@ header .icons {
 }
 /* Related */
 .related .arrows {
-  gap: 20px;   /* ab dono arrows ke beech gap aayega */
+  gap: 20px;  
 }
 .related .arrows img {
   cursor: pointer;
@@ -901,7 +892,7 @@ header .icons {
     color: var(--themecolor);
 }
 
-    /* Social Icons */
+  /*===================== Social Icons ======================*/
 .social {
   margin-top: 15px;
   gap: 25px;
@@ -939,3 +930,165 @@ header .icons {
 
 
 
+
+
+/* ================= HEADER ================= */
+.header .nav-menu {
+  display: flex;
+  gap: 20px;
+}
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 767px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons {
+    margin-top: 10px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .nav-menu {
+    display: none; /* burger menu bana sakte ho later */
+  }
+  .icons img {
+    width: 20px;
+  }
+}
+
+
+/* ================= BEST SELLER ================= */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.product {
+  width: 23%; /* Desktop = 4 per row */
+}
+
+@media (max-width: 1024px) {
+  .product { width: 30%; } /* 3 per row */
+}
+@media (max-width: 767px) {
+  .product { width: 45%; } /* 2 per row */
+}
+@media (max-width: 620px) {
+  .product { width: 48%; } /* 2 per row */
+}
+@media (max-width: 480px) {
+  .product { width: 48%; } /* 2 per row */
+}
+@media (max-width: 400px) {
+  .product { width: 100%; } /* 1 per row */
+}
+
+
+/* ================= RELATED PRODUCTS ================= */
+.related-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.related-items .product {
+  width: 23%; /* Desktop */
+}
+
+@media (max-width: 1024px) {
+  .related-items .product { width: 30%; }
+}
+@media (max-width: 767px) {
+  .related-items .product { width: 45%; }
+}
+@media (max-width: 620px) {
+  .related-items .product { width: 48%; }
+}
+@media (max-width: 480px) {
+  .related-items .product { width: 48%; }
+}
+@media (max-width: 400px) {
+  .related-items .product { width: 100%; }
+}
+
+
+/* ================= PRODUCT DETAIL PAGE ================= */
+.product-section {
+  display: flex;
+  gap: 20px;
+}
+.product-thumbs {
+  width: 10%;
+}
+.product-image {
+  width: 40%;
+}
+.product-info {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .product-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-thumbs {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .product-image,
+  .product-info {
+    width: 100%;
+  }
+}
+
+
+/* ================= FOOTER ================= */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.footer-column {
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
