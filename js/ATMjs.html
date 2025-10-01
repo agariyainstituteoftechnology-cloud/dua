@@ -4,22 +4,32 @@
   <meta charset="utf-8">
   <title>ATM</title>
   <script>
-  var amount = prompt("Enter amount:");
+  do {
+    var amount = prompt("Enter amount (multiple of 500):");
 
-  var n5000 = (amount / 5000) >> 0;   // 5000 notes
-  amount = amount % 5000;
+    var n5000 = amount / 5000 >> 0;
+    amount = amount % 5000;
 
-  var n1000 = (amount / 1000) >> 0;   // 1000 notes
-  amount = amount % 1000;
+    var n1000 = amount / 1000 >> 0;
+    amount = amount % 1000;
 
-  var n500 = (amount / 500) >> 0;     // 500 notes
+    var n500 = amount / 500 >> 0;
 
-  alert("5000 Notes: " + n5000 + 
-        "\n1000 Notes: " + n1000 + 
-        "\n500 Notes: " + n500);
+    alert("5000 Notes: " + n5000 +
+          "\n1000 Notes: " + n1000 +
+          "\n500 Notes: " + n500);
+
+    again = prompt("Do you want to withdraw again? (yes/no)").toLowerCase();
+
+  } while (again == "yes");
+
+  alert("Thank you!");
 </script>
-</head>
-<body>
-
 </body>
 </html>
+
+</script>
+</body>
+</html>
+
+<
