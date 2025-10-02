@@ -947,7 +947,7 @@ header .icons {
 /* ✅ 1024px */
 @media (max-width: 1024px) {
   /* Hero Banner */
-  .banner .heading {
+  .banner .hero .hero-content .heading  {
     font-size: 62px;
   }
 }
