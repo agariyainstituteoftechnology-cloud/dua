@@ -144,8 +144,8 @@ header .icons {
 }
 .btn-now:hover {
   background: #164ab4; /* ya dark shade */
+  transition: 0.3 ease;
 }
-
 .banner {
   position: relative;
   overflow: hidden;
@@ -211,9 +211,6 @@ header .icons {
   background: #ffffff;
   width: 160px;
   height: 57px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 600;
   font-size: 18px;
   color: #000;
@@ -379,26 +376,34 @@ header .icons {
 }
 /* ---------- First Section (3 Images Row) ---------- */
 .image-row {
+  gap: 15px;
   margin-top: 60px;
   margin-bottom: 60px;
 }
 .image-box {
-  width: 413px;
+  max-width: 413px;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 .image-box img {
-  width: 100%;
   object-fit: cover;
   display: block;
 }
 .image-box span {
   position: absolute;
-  background: white;
-  padding: 10px 20px;
-  border-radius: 15px;
-  font-weight: 500;
-  opacity: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 160px;
+  height: 57px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0.9;
 }
 /*--------------------- Blog Section -------------*/
 .blog-header {
@@ -454,11 +459,20 @@ header .icons {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 16px;
+  color: var(--lightgraycolor);
 }
-.icon img {
+.images {
+  gap: 12px;
+  font-size: 16px;
+  color: var(--textcolor);
+  margin-top: 12px;
+}
+.images span {
+  gap: 5px;
+}
+.images img{
   width: 22px;
   height: 22px;
-  margin-right: 5px;
 }
 .read-btn {
   background: var(--themecolor);
@@ -793,7 +807,7 @@ header .icons {
   padding: 100px 0 20px 0;
   position: relative;
   overflow: visible;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .footer .arrow-wrapper {
   position: absolute;
@@ -975,6 +989,12 @@ header .icons {
 }
 .product p {
   font-size: 14px;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 .blog-row {
   display: flex;
