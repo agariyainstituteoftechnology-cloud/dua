@@ -211,8 +211,8 @@ header .icons {
   background: #ffffff;
   width: 160px;
   height: 57px;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   color: #000;
   border-radius: 8px;
   text-align: center;
@@ -354,7 +354,7 @@ header .icons {
 }
 .product h3 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--themecolor);
   margin-top: 5px;
 }
@@ -398,8 +398,8 @@ header .icons {
   background: #ffffff;
   width: 160px;
   height: 57px;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   color: #000;
   border-radius: 8px;
   text-align: center;
@@ -900,6 +900,7 @@ header .icons {
 }
 .footer-bottom .logo {
   gap: 10px;
+  justify-content: flex-start;
 }
 .footer-bottom img {
   height: 25px;
