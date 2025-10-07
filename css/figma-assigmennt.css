@@ -168,8 +168,8 @@ header .icons {
 }
 .slider-dots span {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #d1d5db;
 }
@@ -991,11 +991,12 @@ header .icons {
 .product p {
   font-size: 14px;
 }
-.image-box {
+.image-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 .blog-row {
   display: flex;
@@ -1011,7 +1012,7 @@ header .icons {
 }
 .btn.buy {
   width: 100%;
-  max-width: 500px; /* optional limit */
+  max-width: 500px; 
   background: var(--themecolor);
   color: #fff;
   margin-top: 15px;
