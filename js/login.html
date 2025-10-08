@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
 </head>
 <body>
-    <h1>Login Page</h1>
-    <form id="login-form">
-        <div id="email-wrap">
-            <label>Email</label>
-            <input type="email" name="email" id="email" />
-        </div>
-        <div id="password-wrap">
-            <label>Password</label>
-            <input type="password" name="password" id="password" />
-        </div>
-        <input type="submit" value="Submit">
-    </form>
-    <script>    
-        addEventListener("submit", function(e){
-            e.preventDefault();
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            
-            if(email == ""){
-                document.getElementById("email-wrap").innerHTML += "<span>Email is required.</span>";
-            }
-            if(password == ""){
-                document.getElementById("password-wrap").innerHTML += "<span>Password is required.</span>";
-            }
-            if(email != "" && password != ""){
-                let savedEmail = localStorage.getItem("email");
-                let savedPass = localStorage.getItem("password");
-                if(savedEmail == email && savedPass == password){
-                    window.location.href = "welcom.html";
-                }else{
-                    document.getElementById("login-form").innerHTML += "<span>Invalid email or password.</span>"
-                }
-            }
-        })
-    </script>
+  <h1>Login Page</h1>
+  <form id="login-form">
+    <div id="email-wrap">
+      <label>Email</label>
+      <input type="email" name="email" id="email" />
+    </div>
+    <div id="password-wrap">
+      <label>Password</label>
+      <input type="password" name="password" id="password" />
+    </div>
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script>
+    // Обработчик само за login формата
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Вземаме въведените данни
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      // Премахваме предишни съобщения
+      Array.from(document.getElementById('login-form').querySelectorAll('span.error')).forEach(s => s.remove());
+
+      let ok = true;
+      if (!email) {
+        const s = document.createElement('span'); s.className='error'; s.style.color='red';
+        s.innerText = ' Email is required.'; document.getElementById('email-wrap').appendChild(s); ok = false;
+      }
+      if (!password) {
+        const s = document.createElement('span'); s.className='error'; s.style.color='red';
+        s.innerText = ' Password is required.'; document.getElementById('password-wrap').appendChild(s); ok = false;
+      }
+      if (!ok) return;
+
+      // Вземаме запазените данни от localStorage
+      const savedEmail = localStorage.getItem('email');
+      const savedPass = localStorage.getItem('password');
+
+      // Сравняваме и ако е ок -> welcome.html
+      if (savedEmail === email && savedPass === password) {
+        // можем да маркираме че е логнат — optional
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'welcom.html';
+      } else {
+        const s = document.createElement('span'); s.className='error'; s.style.color='red';
+        s.innerText = ' Invalid email or password.';
+        document.getElementById('login-form').appendChild(s);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,17 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welcome / ATM</title>
 </head>
 <body>
-    <h1 id="heading">Welcome: </h1>
-    <script>
-            let firstname = localStorage.getItem("firstname");
-            let lastname = localStorage.getItem("lastname");
-            document.getElementById("heading").innerText += firstname + " " + lastname;
-        </script>
+  <h1 id="heading">Welcome: </h1>
+  <p>Current balance: <span id="balance-display"></span></p>
+
+  <!-- Форма за теглене -->
+  <form id="withdraw-form">
+    <label>Enter amount to withdraw</label>
+    <input type="number" id="withdraw-amount" min="500" step="500" />
+    <button type="submit">Withdraw</button>
+  </form>
+
+  <div id="notes-result" style="white-space:pre-wrap; margin-top:10px;"></div>
+
+  <script>
+  
+    const firstname = localStorage.getItem('firstname') || '';
+    const lastname = localStorage.getItem('lastname') || '';
+    document.getElementById('heading').innerText += firstname + ' ' + lastname;
+
+
+    function getBalance() {
+      const b = parseInt(localStorage.getItem('balance'), 10);
+      return isNaN(b) ? 0 : b;
+    }
+    function setBalance(newBal) {
+      localStorage.setItem('balance', String(newBal));
+      renderBalance();
+    }
+    function renderBalance() {
+      document.getElementById('balance-display').innerText = getBalance();
+    }
+
+    renderBalance();
+
+
+    document.getElementById('withdraw-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const amountInput = document.getElementById('withdraw-amount').value;
+      const amount = parseInt(amountInput, 10);
+
+      document.getElementById('notes-result').innerText = '';
+
+      // Валидации:
+      if (isNaN(amount) || amount <= 0) {
+        document.getElementById('notes-result').innerText = 'Enter Invalid amount.';
+        return;
+      }
+ 
+      if (amount % 500 !== 0) {
+        document.getElementById('notes-result').innerText = 'Enter Invalid amount.';
+        return;
+      }
+      const currentBalance = getBalance();
+      if (amount > currentBalance) {
+        document.getElementById('notes-result').innerText = 'Enter Invalid amount.';
+        return;
+      }
+
+
+      const newBalance = currentBalance - amount;
+      setBalance(newBalance);
+
+     
+      let rem = amount;
+      const n5000 = Math.floor(rem / 5000); rem = rem % 5000;
+      const n1000 = Math.floor(rem / 1000); rem = rem % 1000;
+      const n500 = Math.floor(rem / 500);
+
+      document.getElementById('notes-result').innerText =
+        'Withdraw successful!\n' +
+        '5000 Notes: ' + n5000 + '\n' +
+        '1000 Notes: ' + n1000 + '\n' +
+        '500 Notes: ' + n500 + '\n' +
+        'New balance: ' + newBalance;
+    });
+  </script>
 </body>
 </html>
