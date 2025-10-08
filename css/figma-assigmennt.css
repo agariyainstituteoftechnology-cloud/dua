@@ -143,8 +143,7 @@ header .icons {
   margin-bottom: 75px;
 }
 .btn-now:hover {
-  background: #164ab4; /* ya dark shade */
-  transition: 0.3 ease;
+  background: #164ab4;
 }
 .banner {
   position: relative;
