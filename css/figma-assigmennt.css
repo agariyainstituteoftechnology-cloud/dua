@@ -179,7 +179,7 @@ header .icons {
   border-radius: 8px;
 }
 
-/*grid-work*/
+/* =========== grid-work-start ==============*/
 .categories {
   padding: 60px 0;
 }
@@ -237,6 +237,7 @@ header .icons {
 .shoes {
   grid-area: shoes;
 }
+/* =================== grid-work-complete ================*/
 /*=============best seller==============*/
 .best-seller {
   background-color: #fff;
@@ -301,9 +302,9 @@ header .icons {
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
-  flex-direction: column; /* column me arrange */
-  align-items: flex-end; /* right side */
-  justify-content: flex-start; /* upar se start */
+  flex-direction: column; 
+  align-items: flex-end;
+  justify-content: flex-start;
   padding: 10px;
   gap: 8px; /* icons ke beech gap */
   box-sizing: border-box;
